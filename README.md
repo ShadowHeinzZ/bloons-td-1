@@ -58,7 +58,7 @@ Pré-requisitos
 
 Instalação
 
-`git clone https://github.com/ShadowHeinzZ/bloons-td-1.git`
+`git clone https://github.com/gabrieloliveira001/bloons-td-1.git`
 `cd tower-defense-bloons`
 
 `Execução`
