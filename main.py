@@ -3,15 +3,16 @@ import sys
 import math
 import button
 import random
+import os
 
-# Initialize Pygame
+
 pygame.init()
 pygame.mixer.init()
 
-pop = pygame.mixer.Sound('sprites\Bloons\pop.mp3')
+pop = pygame.mixer.Sound('sprites/Bloons/pop.mp3')
 pop.set_volume(0.1)
 
-put = pygame.mixer.Sound('sprites\Monkeys\put.mp3')
+put = pygame.mixer.Sound('sprites/Monkeys/put.mp3')
 put.set_volume(0.2)
 
 vendersom = pygame.mixer.Sound('sprites/Monkeys/vender.mp3')
@@ -20,10 +21,9 @@ vendersom.set_volume(0.2)
 upgradesom = pygame.mixer.Sound('sprites/Monkeys/upgrade.mp3')
 upgradesom.set_volume(0.2)
 
-clicksound = pygame.mixer.Sound('sprites\click.mp3')
+clicksound = pygame.mixer.Sound('sprites/click.mp3')
 clicksound.set_volume(0.2)
 
-# Set up the screen
 screen_width = 1022
 screen_height = 532
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -31,14 +31,14 @@ pygame.display.set_caption("Tower Defense Game")
 
 
 
-# Load background image
-background = pygame.image.load("sprites\map1.png").convert()
-menu = pygame.image.load("sprites\Menu.png").convert_alpha()
 
-# Set up the clock
+background = pygame.image.load("sprites/map1.png").convert()
+menu = pygame.image.load("sprites/Menu.png").convert_alpha()
+
+
 clock = pygame.time.Clock()
 
-# Set up the enemy class
+
 
 
 class Bloon:
@@ -49,7 +49,7 @@ class Bloon:
         self.life = life
         self.speed = speed
         self.camouflage = 0
-        self.sprite = pygame.image.load("sprites\Bloons\Red_Bloon.png").convert_alpha()
+        self.sprite = pygame.image.load("sprites/Bloons/Red_Bloon.png").convert_alpha()
         self.rect = self.sprite.get_rect()
         self.rect.topleft = [self.x, self.y]
         self.target_x = -200
@@ -162,7 +162,7 @@ class Monkey:
         self.damage = damage
         self.pierce = 2
         self.rotation = 0
-        self.range = 100  # New attribute
+        self.range = 100
         self.seecamo = False
         self.kills = 0
         self.upgrade1 = 0
@@ -179,7 +179,7 @@ class Monkey:
 
     def draw(self):
         screen.blit(self.sprite, (self.x, self.y))
-        for projectile in self.projectiles:  # New code
+        for projectile in self.projectiles:
             projectile.draw()
 
     def find_target(self, value):
@@ -212,7 +212,6 @@ class Monkey:
         projectile = Projectile(self.x, self.y+20, vx, vy, self.damage, self.pierce, self.spritedart)
         angle = self.get_angle(target.x, target.y)
 
-        # Rotate projectile sprite
         rotated_sprite = pygame.transform.rotate(projectile.sprite, math.degrees(angle))
         projectile.rect = rotated_sprite.get_rect(center=projectile.rect.center)
         projectile.sprite = rotated_sprite
@@ -294,7 +293,6 @@ class Projectile:
         screen.blit(self.sprite, (self.x, self.y))
 
 
-# Set up the enemies
 Bloons = []
 #Bloons.append(Bloon("Red Bloon",1,0.250,-200,180,1))
 #Bloons.append(Bloon("Blue Bloon",1,0.500,-200,180,1))
@@ -352,7 +350,7 @@ dt = clock.tick(velocidadegame)
 spawningtimes = 50
 spawningtimes2 = 50
 rodada = 1
-grana = 999999
+grana = 99999
 autostart = False
 rodadainiciou = False
 SelectedMonkey = "Nenhum"
@@ -396,7 +394,6 @@ while True:
     PinkBloon = Bloon("Pink Bloon",1,10,-200,180,1)
     if SelectedMonkey == "Macaco Dardo":
         spritemacaco = dart_monkey_sprite
-    # Handle events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -440,7 +437,7 @@ while True:
                 SelectedMonkey = "Nenhum"
                 break
 
-    # Draw the background
+
     screen.blit(background, (0, 0))
     screen.blit(menu, (822, 0))
 
@@ -459,7 +456,7 @@ while True:
             autostart = False
 
     
-    #Rounds
+
     if rodadainiciou:
         spawn_timer += dt
         if spawningtimes >= 1:
@@ -534,7 +531,7 @@ while True:
             velocidadegame = 60
 
 
-    # Move and draw the enemies
+
     for value in Monkeys:
         value.draw()
         target = value.find_target(Bloons)
@@ -598,7 +595,7 @@ while True:
                 Bloons.append(Bloon("Yellow Bloon", 1,5,value.x-5, value.y-5,value.pathline))
                 Bloons.append(Bloon("Yellow Bloon", 1,5,value.x+5, value.y+5,value.pathline))
 
-            #Moabs abaixo
+
 
             if(value.name == "Red Moab"):
                 for i in range(13):
@@ -619,7 +616,7 @@ while True:
       
     
 
-    # Update the display
+
     dinheiro = font.render(f"${grana}", True, (255, 255, 255))
     contornodinheiro = fontc.render(f"${grana}", True, (0, 0, 0))
     screen.blit(contornodinheiro, (dinheirox-2, dinheiroy+2))
@@ -655,7 +652,7 @@ while True:
     screen.blit(ninjamonkeyprice, ninjamonkeypricerect)
 
 
-    #Botões
+
     if start_button.draw(screen):
         rodadainiciou = True
     if rodadainiciou:
@@ -987,5 +984,5 @@ while True:
         sys.exit()
     
 
-    # Limit the frame rate
+
     clock.tick(velocidadegame)
