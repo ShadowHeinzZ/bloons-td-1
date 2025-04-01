@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/1763cec3-a9af-427f-8a49-43657292474a)
 [Vídeo mostrando o jogo](https://www.youtube.com/watch?v=nQbCPDrdX7w)
 
 [Linkedin](https://www.linkedin.com/in/gabriel-morais-de-oliveira-72259a359/)
