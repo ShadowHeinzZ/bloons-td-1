@@ -3,90 +3,53 @@
 
 [Linkedin](https://www.linkedin.com/in/gabriel-morais-de-oliveira-72259a359/)
 
-🎯 Tower Defense - Inspirado em Bloons (Python/Pygame)
-Um jogo de Tower Defense completo com sistema de upgrades, waves progressivas e mecânicas complexas, desenvolvido em Python.
+# 🏹 Tower Defense – Inspirado em Bloons (Python + Pygame)
 
-Usando: Python, Pygame
+**Tower Defense** é um jogo 2D completo, inspirado no clássico Bloons, com sistema de upgrades, waves progressivas e mecânicas de gameplay avançadas. Desenvolvido em **Python** utilizando a biblioteca **Pygame**, o jogo oferece uma experiência estratégica e desafiadora.
 
-`✨ Funcionalidades Principais`
+---
 
--Sistema Completo de Waves
+## 🎯 Funcionalidades Principais
 
--100 waves progressivas com 8 tipos diferentes de balões
+- 🌀 **Sistema Completo de Waves**
+  - 100 ondas progressivas com dificuldade crescente
+  - 8 tipos diferentes de balões com comportamentos únicos
+  - Geração procedural baseada na dificuldade atual
+  - Controle de spawn por temporizadores e padrões
 
--Geração procedural de inimigos baseada na dificuldade
+- 🧠 **Mecânicas Avançadas de Gameplay**
+  - Pathfinding com 15 waypoints dinâmicos
+  - Sistema balístico com ângulos, velocidade e penetração
+  - Torres com 3 ramificações de upgrades (até o momento 1 tipo implementado)
 
--Spawn controlado por timers e padrões de comportamento
+- 🖥️ **Interface e Interação**
+  - HUD interativo com indicadores de status
+  - Menu de seleção de torres com visualização de alcance
+  - Sistema de upgrades com árvore de habilidades
+  - Controle de velocidade do jogo (1x, 2x, 3x)
 
--Mecânicas Avançadas de Gameplay
+---
 
--Pathfinding complexo com 15 waypoints dinâmicos
+## 🛠️ Tecnologias Utilizadas
 
--Sistema de combate balístico (ângulos, penetração, velocidade)
+- 🐍 **Python**
+- 🎮 **Pygame** – renderização, sons e gerenciamento de eventos
+- 🧮 **Matemática Vetorial** – movimentação, colisões, combate
+- 📦 **Programação Orientada a Objetos**
+  - Classes especializadas para Bloons, Torres, Projetéis, etc.
+- 🔊 **Sistema de Áudio** com mixagem e efeitos
 
--1 tipos de torres com 3 ramificações de upgrades(no momento)
+---
 
-`Tecnologias Implementadas:`
+## 🚀 Como Executar
 
--🎮 Pygame para renderização e gerenciamento de eventos
+### ⚙️ Pré-requisitos
+- Python 3.8+
+- Pygame
 
--🧮 Matemática vetorial para movimentação e colisões
+### 📦 Instalação
+```bash
+git clone https://github.com/gabrieloliveira001/bloons-td-1.git
+cd tower-defense-bloons
+pip install pygame
 
--📦 Sistema OO com classes especializadas (Bloon, Monkey, Projectile)
-
--🔊 Sistema de áudio com mixagem e efeitos sonoros
-
--HUD interativo com indicadores de status
-
--Menu de seleção de torres com preview de alcance
-
--Sistema de upgrades com árvore de habilidades
-
--Controles de velocidade do jogo (1x, 2x, 3x)
-
-`🛠️ Tecnologias Utilizadas`
-  -Core
-  
-  -Python
-  
-  -Pygame
-
-🚀 Como Executar
-Pré-requisitos
-
-`Python 3.8+`
-`pip install pygame`
-
-Instalação
-
-`git clone https://github.com/gabrieloliveira001/bloons-td-1.git`
-`cd tower-defense-bloons`
-
-`Execução`
-`python main.py`
-
-`🤔 Por Que Este Projeto?`
-`Este projeto foi desenvolvido para explorar:`
-
--Arquitetura de jogos 2D complexos
-
--Balanceamento de sistemas de progressão
-
--Técnicas de otimização para Python
-
--Padrões de design para game development
-
--Um joguinho é sempre bom né
-
-`📈 Próximos Passos (Roadmap)`
-
--Sistema de achievements
-
--Modo endless survival
-
--Multiplayer cooperativo
-
--Editor de mapas integrado
-
-`📄 Licença`
-Este projeto está sob licença MIT - veja o arquivo LICENSE para detalhes.
