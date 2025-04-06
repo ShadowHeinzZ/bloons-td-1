@@ -70,6 +70,7 @@ pip install pygame
 ### ⚙️ Pré-requisitos
 - Python 3.8+
 - Pygame
+```
 
 ### 📦 Instalação
 ```bash
