@@ -16,12 +16,6 @@
 
 ---
 
-## 🎮 Sobre o Projeto
-
-**Tower Defense** é um jogo 2D completo, inspirado no clássico **Bloons**, com sistema de upgrades, ondas progressivas de inimigos e mecânicas avançadas. Desenvolvido em **Python** com **Pygame**, o jogo oferece uma experiência estratégica e desafiadora com gameplay envolvente.
-
----
-
 ## 🎯 Funcionalidades Principais
 
 ### 🌀 Sistema de Waves
