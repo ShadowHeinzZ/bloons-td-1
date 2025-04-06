@@ -49,7 +49,11 @@
 
 ### 📦 Instalação
 ```bash
-git clone https://github.com/gabrieloliveira001/bloons-td-1.git
-cd tower-defense-bloons
+git clone https://github.com/gabrieloliveira001/Bloons-td-1-Python.git
 pip install pygame
+```
+### 📦 Instalação
+```
+python main.py
+```
 
